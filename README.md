@@ -135,7 +135,7 @@ To set up for development:
 ```bash
 git clone https://github.com/anilaltuner/livekit-openai-agents.git
 cd livekit-openai-agents
-pip install -e .[dev] # If you define a [dev] extra in pyproject.toml for linters, etc.
+pip install -e .
 ```
 
 ## License
