@@ -1,6 +1,6 @@
 # LiveKit OpenAI Agents Adapter
 
-This library provides an adapter to integrate agents built with the [openai-agents](https://github.com/openai/openai-python) library (specifically, its `agents` module) as LLM providers within the [LiveKit Agents](https://github.com/livekit/agents) framework.
+This library provides an adapter to integrate agents built with the [openai-agents](https://github.com/openai/openai-agents-python) library (specifically, its `agents` module) as LLM providers within the [LiveKit Agents](https://github.com/livekit/agents) framework.
 
 It allows you to plug in your `openai-agents` based orchestrators, leveraging their capabilities like conversation history management, tool usage, and handoffs, while still utilizing the real-time audio and agent lifecycle management features of LiveKit Agents.
 
