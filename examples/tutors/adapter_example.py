@@ -6,7 +6,7 @@ from livekit.plugins import (
     openai,
     silero
 )
-from adapter import OpenAIAgentAdapter
+from livekit_openai_agents import OpenAIAgentAdapter
 
 from examples.tutors.tutor_agents import triage_agent
 
