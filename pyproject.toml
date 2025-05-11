@@ -1,0 +1,32 @@
+# livekit_orchestrator_llm_adapter_project/pyproject.toml
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "livekit_openai_agents"
+version = "0.1.0"
+authors = [
+  { name="Anil Berk Altuner", email="altuneranilberk@gmail.com" },
+]
+description = "An adapter to integrate OpenAI Agents as LLM providers for LiveKit."
+readme = "README.md"
+requires-python = ">=3.11,<4.0"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "livekit-agents[openai,elevenlabs,silero,turn-detector] == 1.0.17",
+    "livekit-plugins-noise-cancellation~=0.2",
+    "openai-agents >= 0.0.14",
+    "pyee >= 9.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/anilaltuner/livekit-openai-agents"
+"Bug Tracker" = "https://github.com/anilaltuner/livekit-openai-agents"
