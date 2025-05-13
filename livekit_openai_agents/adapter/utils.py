@@ -1,4 +1,30 @@
+from typing import List, Dict, Any
+
 from livekit.agents import ChatContext
+
+def generate_context(message_history: dict, context: List[Dict[str, Any]], user_message: str) -> str:
+    """
+    Generates a ChatContext from a message history and context.
+
+    Args:
+        message_history: The message history to use for the ChatContext.
+        context: The context to use for the ChatContext.
+        user_message: The user message
+
+    Returns:
+        A context string that can be used to initialize conversation.
+    """
+    return f"""
+    User Message:
+    {user_message}
+    
+    
+    Message History:
+    {message_history}
+
+    Context:
+    {context}
+    """
 
 def extract_last_user_message(chat_ctx: ChatContext) -> str:
     """

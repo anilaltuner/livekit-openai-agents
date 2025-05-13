@@ -12,10 +12,11 @@ authors = [
 description = "An adapter to integrate OpenAI Agents as LLM providers for LiveKit."
 readme = "README.md"
 requires-python = ">=3.11,<4.0"
+license = { text = "MIT" }
+
 classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.11",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Topic :: Multimedia :: Sound/Audio :: Speech",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
