@@ -29,8 +29,25 @@ async def entrypoint(ctx: agents.JobContext):
     await ctx.connect()
     print(f"🔌 Connected to room: {ctx.room.name}")
 
-    # 3. Initialize the OrchestratorLLMAdapter with your orchestrator instance
-    custom_llm_adapter = OpenAIAgentAdapter(orchestrator=triage_agent)
+    # Initialize the OpenAIAgentAdapter
+    # streaming=False (default): Uses the original non-streaming approach
+    # streaming=True: Enables real-time streaming responses
+    custom_llm_adapter = OpenAIAgentAdapter(
+        orchestrator=triage_agent,
+        streaming=False  # Default behavior - uses original non-streaming approach
+    )
+
+    # To enable streaming, you can set streaming=True:
+    # custom_llm_adapter = OpenAIAgentAdapter(
+    #     orchestrator=triage_agent,
+    #     streaming=True  # Enable streaming for real-time responses
+    # )
+
+    # You can also change streaming mode dynamically:
+    # custom_llm_adapter.set_streaming(True)   # Enable streaming
+    # custom_llm_adapter.set_streaming(False)  # Disable streaming (back to original approach)
+    
+    print(f"📊 Streaming mode: {'Enabled' if custom_llm_adapter.is_streaming_enabled() else 'Disabled (Original approach)'}")
 
     session = AgentSession(
         stt=openai.STT(model="whisper-1"),
